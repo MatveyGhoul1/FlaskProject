@@ -109,13 +109,6 @@ def register():
         return redirect("/main")
     return render_template('register.html', title='Регистрация', form=form)
 
-@app.route('/main')
-@login_required
-def main_menu():
-    if current_user.nickname == "sfqbq":
-        return render_template('sofa_main.html', title='Главное меню')
-    return render_template('main.html', title='Главное меню')
-
 @app.route('/news')
 @login_required
 def news():
