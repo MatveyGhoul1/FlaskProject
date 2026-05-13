@@ -1,0 +1,144 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFF9F0;
+    color: #3D342F;
+    scroll-behavior: smooth;
+}
+.header_strip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #E29578;
+    text-decoration: none;
+    flex: 1;
+}
+.nav_links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex: 2;
+}
+.nav_links a {
+    color: #3D342F;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.auth_box {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+.profile_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #83C5BE;
+    border-radius: 50%;
+}
+.profile_btn img {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
+.nav_spacer {
+    height: 100px;
+}
+.feed_wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.feed_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.page_title {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+}
+.create_news_btn {
+    background-color: #83C5BE;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.create_news_btn:hover {
+    background-color: #66b0a8;
+}
+.news_container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.post_card {
+    background-color: #FFFFFF;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid #f0f0f0;
+    border-bottom: 6px solid #83C5BE; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+.post_author {
+    color: #E29578;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.post_date {
+    color: #a0a0a0;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.post_title {
+    font-size: 28px;
+    color: #3D342F;
+    margin: 15px 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.post_text {
+    font-size: 17px;
+    color: #6d645e;
+    line-height: 1.7;
+}
+@media (max-width: 768px) {
+    .feed_wrapper {
+        padding: 15px;
+    }
+    .post_card {
+        padding: 25px;
+    }
+    .post_title {
+        font-size: 22px;
+    }
+    .feed_header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

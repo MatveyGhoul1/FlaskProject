@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация — УЧЕБА.ХАБ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <div class="logo">УЧЕБА.ХАБ</div>
+
+        <div class="auth-card register-card">
+            <h2>Регистрация</h2>
+            <p class="auth-subtitle">Создай свой аккаунт для обучения</p>
+
+            {% if message %}
+                <div class="alert-message">
+                    {{ message }}
+                </div>
+            {% endif %}
+
+            <form action="" method="post" novalidate>
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.surname.label }}<br>
+                    {{ form.surname(class="form-control") }}<br>
+                    {% for error in form.surname.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.name.label }}<br>
+                    {{ form.name(class="form-control") }}<br>
+                    {% for error in form.name.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.patronymic.label }}<br>
+                    {{ form.patronymic(class="form-control") }}<br>
+                    {% for error in form.patronymic.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div>
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.username.label }}<br>
+                    {{ form.username(class="form-control") }}<br>
+                    {% for error in form.username.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div> 
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.email.label }}<br>
+                    {{ form.email(class="form-control") }}<br>
+                    {% for error in form.email.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div> 
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.birthday.label }}<br>
+                    {{ form.birthday(class="form-control") }}<br>
+                    {% for error in form.birthday.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div> 
+
+                <div class="input-row">
+                    {{ form.csrf_token }} <div class="input-group">
+                        {{ form.school.label }}<br>
+                        {{ form.school(class="form-control") }}<br>
+                        {% for error in form.school.errors %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                        {% endfor %}
+                    </div> 
+                    {{ form.csrf_token }} <div class="input-group">
+                        {{ form.class_number.label }}<br>
+                        {{ form.class_number(class="form-control") }}<br>
+                        {% for error in form.class_number.errors %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                        {% endfor %}
+                    </div> 
+                </div>
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.password.label }}<br>
+                    {{ form.password(class="form-control") }}<br>
+                    {% for error in form.password.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div> 
+
+                {{ form.csrf_token }} <div class="input-group">
+                    {{ form.password_confirm.label }}<br>
+                    {{ form.password_confirm(class="form-control") }}<br>
+                    {% for error in form.password_confirm.errors %}
+                        <div class="alert alert-danger">{{ error }}</div>
+                    {% endfor %}
+                </div> 
+
+                {{ form.submit(class="auth-submit") }}
+            </form>
+
+            <div class="auth-footer">
+                <span>Уже есть аккаунт?</span>
+                <a href="/login" class="switch-link">Войти</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

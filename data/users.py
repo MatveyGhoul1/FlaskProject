@@ -1,0 +1,24 @@
+import datetime
+import sqlalchemy
+from flask_login import UserMixin
+from .db_session import SqlAlchemyBase
+
+class User(SqlAlchemyBase, UserMixin):
+    __tablename__ = 'users'
+
+    id = sqlalchemy.Column(sqlalchemy.Integer,
+                           primary_key=True, autoincrement=True)
+    nickname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    surname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    patronymic = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    email = sqlalchemy.Column(sqlalchemy.String,
+                              index=True, unique=True, nullable=True)
+    hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    birth_date = sqlalchemy.Column(sqlalchemy.DateTime,
+                                     default=datetime.datetime.now)
+
+    school = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
+    klass = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    def check_password(self, password):
+        return self.hashed_password == password

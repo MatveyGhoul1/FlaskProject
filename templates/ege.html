@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ЕГЭ 2026 — УЧЕБА.ХАБ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='ege.css') }}">
+</head>
+<body>
+
+    <header class="header_strip">
+        <a href="/" class="logo">УЧЕБА.ХАБ</a>
+        <nav class="nav_links">
+            <a href="/news">Новости</a>
+            <a href="/ege">ЕГЭ</a>
+            <a href="/oge">ОГЭ</a>
+        </nav>
+        <div class="auth_box">
+            <a href="/dashboard" class="profile_btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Профиль">
+            </a>
+        </div>
+    </header>
+
+    <div class="nav_spacer"></div>
+
+    <main class="main_content">
+        <header class="ege_header">
+            <h1>Подготовка к ЕГЭ 2026</h1>
+            <p>Все необходимые материалы, спецификации ФИПИ и тренажеры в одном месте.</p>
+        </header>
+
+        <section class="subjects_grid">
+            <a href="https://math-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">math</div>
+                <h3>Математика</h3>
+                <p>Профильный уровень: функции, логарифмы и геометрия.</p>
+            </a>
+
+            <a href="https://rus-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">Аб</div>
+                <h3>Русский язык</h3>
+                <p>Орфография, пунктуация и работа над сочинением.</p>
+            </a>
+
+            <a href="https://inf-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">Py</div>
+                <h3>Информатика</h3>
+                <p>Алгоритмы, программирование и логические задачи.</p>
+            </a>
+
+            <a href="https://soc-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">⚖️</div>
+                <h3>Обществознание</h3>
+                <p>Право, экономика, политика и социальные отношения.</p>
+            </a>
+
+            <a href="https://phys-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">λ</div>
+                <h3>Физика</h3>
+                <p>Механика, термодинамика и квантовая физика.</p>
+            </a>
+
+            <a href="https://chem-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🧪</div>
+                <h3>Химия</h3>
+                <p>Органическая и неорганическая химия, задачи на растворы.</p>
+            </a>
+
+            <a href="https://bio-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🧬</div>
+                <h3>Биология</h3>
+                <p>Генетика, анатомия и сложные циклы растений.</p>
+            </a>
+
+            <a href="https://hist-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">📜</div>
+                <h3>История</h3>
+                <p>Работа с картами, датами и историческими личностями.</p>
+            </a>
+
+            <a href="https://en-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">EN</div>
+                <h3>Английский</h3>
+                <p>Аудирование, грамматика и устная часть экзамена.</p>
+            </a>
+
+            <a href="https://lit-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🖋️</div>
+                <h3>Литература</h3>
+                <p>Анализ классики, стихотворных размеров и лирики.</p>
+            </a>
+
+            <a href="https://geo-ege.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🌍</div>
+                <h3>География</h3>
+                <p>Экономика стран, природа и часовые пояса.</p>
+            </a>
+        </section>
+
+        <section class="useful_resources">
+            <h2>Официальные ресурсы</h2>
+            <div class="resources_list">
+                <a href="https://fipi.ru" target="_blank" class="resource_item">
+                    <strong>ФИПИ</strong>
+                    <span>Демоверсии, спецификации и кодификаторы</span>
+                </a>
+                <a href="https://sdamgia.ru" target="_blank" class="resource_item">
+                    <strong>Решу ЕГЭ</strong>
+                    <span>Дистанционная система обучения и тесты</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

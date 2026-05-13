@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ОГЭ 2026 — УЧЕБА.ХАБ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='oge.css') }}">
+</head>
+<body>
+
+    <header class="header_strip">
+        <a href="/" class="logo">УЧЕБА.ХАБ</a>
+        <nav class="nav_links">
+            <a href="/news">Новости</a>
+            <a href="/ege">ЕГЭ</a>
+            <a href="/oge">ОГЭ</a>
+        </nav>
+        <div class="auth_box">
+            <a href="/dashboard" class="profile_btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Профиль">
+            </a>
+        </div>
+    </header>
+
+    <div class="nav_spacer"></div>
+
+    <main class="main_content">
+        <header class="oge_header">
+            <h1>Подготовка к ОГЭ 2026</h1>
+            <p>База знаний для успешной сдачи экзаменов в 9 классе.</p>
+        </header>
+
+        <section class="subjects_grid">
+            <a href="https://math-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">1+1</div>
+                <h3>Математика</h3>
+                <p>Алгебра, геометрия и реальная математика.</p>
+            </a>
+
+            <a href="https://rus-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">Яz</div>
+                <h3>Русский язык</h3>
+                <p>Изложение, тест и написание сочинения 9.3.</p>
+            </a>
+
+            <a href="https://inf-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon"><b>{ }</b></div>
+                <h3>Информатика</h3>
+                <p>Системы счисления, робот и основы Python.</p>
+            </a>
+
+            <a href="https://phys-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">⚡</div>
+                <h3>Физика</h3>
+                <p>Законы Ньютона, оптика и лабораторные работы.</p>
+            </a>
+
+            <a href="https://soc-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🤝</div>
+                <h3>Обществознание</h3>
+                <p>Человек и общество, сфера духовной культуры.</p>
+            </a>
+
+            <a href="https://chem-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">⚗️</div>
+                <h3>Химия</h3>
+                <p>Таблица Менделеева и химические свойства веществ.</p>
+            </a>
+
+            <a href="https://bio-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">🌿</div>
+                <h3>Биология</h3>
+                <p>Царства организмов, бактерии и грибы.</p>
+            </a>
+
+            <a href="https://geo-oge.sdamgia.ru/" target="_blank" class="subject_card">
+                <div class="subject_icon">📍</div>
+                <h3>География</h3>
+                <p>Природа России и основы картографии.</p>
+            </a>
+        </section>
+    </main>
+
+</body>
+</html>

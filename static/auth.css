@@ -1,0 +1,115 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFF9F0;
+}
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.logo {
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #E29578;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+.auth-card {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    width: 350px;
+    border-radius: 20px;
+    border-bottom: 6px solid #83C5BE;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    text-align: center;
+    box-sizing: border-box;
+}
+.auth-card h2 {
+    margin-top: 0;
+    color: #3D342F;
+    font-size: 24px;
+}
+.auth-subtitle {
+    color: #8a817c;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D342F;
+    margin-bottom: 8px;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f4f1ef;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+.input-group input:focus {
+    border-color: #83C5BE;
+}
+.auth-submit {
+    width: 100%;
+    background-color: #83C5BE;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.auth-submit:hover {
+    background-color: #66b0a8;
+    transform: translateY(-2px);
+}
+.auth-footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #8a817c;
+}
+.switch-link {
+    color: #E29578;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.switch-link:hover {
+    text-decoration: underline;
+}
+.error-message {
+    background-color: #FFF1ED; 
+    color: #E29578;          
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #FADED5;
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

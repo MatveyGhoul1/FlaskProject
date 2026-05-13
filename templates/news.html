@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости — УЧЕБА.ХАБ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='news.css') }}">
+</head>
+<body>
+
+    <header class="header_strip">
+        <a href="/" class="logo">УЧЕБА.ХАБ</a>
+        
+        <nav class="nav_links">
+            <a href="/news">Новости</a>
+            <a href="/ege">ЕГЭ</a>
+            <a href="/oge">ОГЭ</a>
+        </nav>
+
+        <div class="auth_box">
+            <a href="/dashboard" class="profile_btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Профиль">
+            </a>
+        </div>
+    </header>
+
+    <div class="nav_spacer"></div>
+
+    <main class="feed_wrapper">
+        <div class="feed_header">
+            <h1 class="page_title">Школьные новости</h1>
+            <a href="/add_news" class="create_news_btn">Создать новость</a>
+        </div>
+
+        <div class="news_container">
+            {% for item in news %}
+                <article class="post_card">
+                    <div class="post_header">
+                        <span class="post_author">{{ item.author }}</span>
+                        <span class="post_date">{{ item.public_date.strftime('%H:%M %d %B') }}</span>
+                    </div>
+                    
+                    <div class="post_body">
+                        <h2 class="post_title">{{ item.title }}</h2>
+                        <p class="post_text">
+                            {{ item.content }}
+                        </p>
+                    </div>
+                </article>
+            {% else %}
+                <p style="text-align: center; color: #6d645e;">Новостей пока нет. Будьте первым!</p>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

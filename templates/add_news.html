@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создать новость — УЧЕБА.ХАБ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_news.css') }}">
+</head>
+<body>
+
+    <header class="header_strip">
+        <a href="/" class="logo">УЧЕБА.ХАБ</a>
+        
+        <nav class="nav_links">
+            <a href="/news">Новости</a>
+            <a href="/ege">ЕГЭ</a>
+            <a href="/oge">ОГЭ</a>
+        </nav>
+
+        <div class="auth_box">
+            <a href="/dashboard" class="profile_btn">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Профиль">
+            </a>
+        </div>
+    </header>
+
+    <div class="nav_spacer"></div>
+
+    <main class="main_content">
+        <div class="form_container">
+            <h1 class="page_title">Новая публикация</h1>
+            
+            <form action="" method="post" class="news_form">
+                {{ form.hidden_tag() }}
+                
+                <div class="input_group">
+                    <label>Оглавление (Заголовок)</label>
+                    {{ form.title(class="form_input", placeholder="Введите краткое название...") }}
+                </div>
+
+                <div class="input_group">
+                    <label>Основная часть (Текст новости)</label>
+                    {{ form.content(class="form_textarea", placeholder="Расскажите подробнее...", rows="10") }}
+                </div>
+
+                <div class="form_actions">
+                    <a href="/news" class="cancel_btn">Назад к новостям</a>
+                    {{ form.submit(class="submit_btn") }}
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

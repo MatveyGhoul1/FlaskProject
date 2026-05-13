@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFF9F0;
+}
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    min-height: 100vh;
+    padding: 40px 0; 
+}
+.logo {
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #E29578;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+.register-card {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    width: 420px;
+    border-radius: 25px;
+    border-bottom: 6px solid #83C5BE; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    text-align: center;
+    box-sizing: border-box;
+}
+.register-card h2 {
+    margin-top: 0;
+    color: #3D342F;
+    font-size: 26px;
+}
+.auth-subtitle {
+    color: #8a817c;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3D342F;
+    margin-bottom: 6px;
+    padding-left: 5px;
+}
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f4f1ef;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+.input-group input:focus {
+    border-color: #83C5BE;
+    background-color: #fafffe;
+}
+.input-row {
+    display: flex;
+    gap: 15px;
+}
+.input-row .input-group {
+    flex: 1; 
+}
+.auth-submit {
+    width: 100%;
+    background-color: #83C5BE;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+.auth-submit:hover {
+    background-color: #66b0a8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(131, 197, 190, 0.3);
+}
+.auth-footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #8a817c;
+}
+.switch-link {
+    color: #E29578;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.switch-link:hover {
+    text-decoration: underline;
+}
+@media (max-width: 480px) {
+    .register-card {
+        width: 90%;
+        padding: 25px 20px;
+    }
+    .input-row {
+        flex-direction: column; 
+        gap: 0;
+    }
+}
+.alert-message {
+    background-color: #FFF1ED; 
+    color: #E29578;          
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #FADED5;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    animation: slideDown 0.3s ease-out;
+}
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

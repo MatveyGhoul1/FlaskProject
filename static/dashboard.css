@@ -1,0 +1,135 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #FFF9F0;
+    color: #3D342F;
+}
+.header_strip {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+    color: #E29578;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.logo:hover {
+    opacity: 0.7;
+}
+.profile_status {
+    font-size: 13px;
+    font-weight: 600;
+    color: #83C5BE;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 70px; 
+}
+.profile-card {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 30px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+    border-bottom: 8px solid #83C5BE;
+    text-align: center;
+}
+.profile-header h2 {
+    margin: 15px 0 5px 0;
+    font-size: 24px;
+    color: #3D342F;
+}
+.avatar-circle {
+    width: 100px;
+    height: 100px;
+    background: #f0f7f6;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar-circle img {
+    width: 50px;
+    opacity: 0.6;
+}
+.user-tag {
+    background: #f0f7f6;
+    color: #83C5BE;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.info-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+}
+.info-item {
+    border-bottom: 1px solid #f4f1ef;
+    padding-bottom: 10px;
+}
+.info-item:last-child {
+    border-bottom: none;
+}
+.info-item label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8a817c;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+.info-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3D342F;
+}
+.profile-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; 
+    text-align: center;
+}
+.logout-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff4655;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: 2px solid #ff4655;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.logout-card-btn:hover {
+    background-color: #ff4655;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 70, 85, 0.3);
+}
